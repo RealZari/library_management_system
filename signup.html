@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <!-- Header -->
+    <header style="background-color: #007BFF; padding: 20px; text-align: center;">
+        <img src="logo.png" alt="Library Management System Logo" style="height: 60px; margin-right: 20px;">
+        <h1 style="margin: 0; font-size: 2.5em; color: #fff;">Library Management System</h1>
+    </header>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <div class="signup-container" style="width: 90%; max-width: 400px; margin: 50px auto; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center; font-size: 2em; color: #333; margin-bottom: 20px;">Sign Up</h2>
+        <form id="signupForm" style="display: flex; flex-direction: column;">
+            <label for="name" style="margin-bottom: 5px; color: #333;">Name:</label>
+            <input type="text" id="name" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+            <label for="email" style="margin-bottom: 5px; color: #333;">Email:</label>
+            <input type="email" id="email" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+            <label for="password" style="margin-bottom: 5px; color: #333;">Password:</label>
+            <input type="password" id="password" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+            <label for="role" style="margin-bottom: 5px; color: #333;">Role:</label>
+            <select id="role" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+                <option value="Admin">Admin</option>
+                <option value="Student">Student</option>
+                <option value="Teacher">Teacher</option>
+            </select>
+            <button type="submit" style="background-color: #007BFF; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; transition: background-color 0.3s ease;">
+                Sign Up
+            </button>
+        </form>
+        <p style="font-size: 1em; color: #555; text-align: center; margin-top: 20px;">
+            Already have an account? 
+            <a href="index.html" style="color: #007BFF; text-decoration: none; font-weight: bold; transition: color 0.3s ease, text-shadow 0.3s ease;">
+              Login
+            </a>
+        </p>
+    </div>
+        <!-- Footer -->
+        <footer style="background-color: #007BFF; color: white; text-align: center; padding: 20px 10px; position: fixed; bottom: 0; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: row-reverse;">
+            <img src="zaryab.png" alt="Zaryab Hussain" style="border-radius: 50%; width: 40px; height: 40px; margin-left: 10px;">
+            <p style="margin: 0;">&copy; 2024 Library Management System. Designed and Developed by Zaryab Hussain</p>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>

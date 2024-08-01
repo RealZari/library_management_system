@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Admin Dashboard</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333;">
+    <!-- Header -->
+    <header style="background-color: #007BFF; padding: 20px; color: white; display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center;">
+            <h1 style="margin: 0; font-size: 1.5em;">Library Management System</h1>
+            <nav style="margin-left: 20px;">
+                <a href="#" style="color: white; text-decoration: none; margin-right: 15px; font-size: 1.1em;">Books Management</a>
+                <a href="#" style="color: white; text-decoration: none; margin-right: 15px; font-size: 1.1em;">User Management</a>
+                <a href="#" style="color: white; text-decoration: none; font-size: 1.1em;">Requested Books</a>
+            </nav>
+        </div>
+        <input type="text" id="searchBook" placeholder="Search for books..." style="padding: 8px; border-radius: 5px; border: none; width: 200px;">
+    </header>
+
+    <!-- Main Content -->
+    <div class="admin-container" style="padding: 20px; max-width: 1200px; margin: 20px auto; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <h2 style="text-align: center; color: #007BFF;">Welcome Admin to the Dashboard</h2>
+        
+        <div class="section" style="margin-top: 30px;">
+            <h3 style="font-size: 1.5em; color: #333;">Books Management</h3>
+            <button id="addBookButton" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 20px;">Add Book</button>
+            <div id="bookList">
+            </div>
+        </div>
+        
+        <div class="section" style="margin-top: 30px;">
+            <h3 style="font-size: 1.5em; color: #333;">Registered Teachers & Students</h3>
+            <div id="userList" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+        </div>
+
+        <div class="section" style="margin-top: 30px;">
+            <h3 style="font-size: 1.5em; color: #333;">Requested Books</h3>
+            <div id="requestedBooks" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+        </div>
+    </div>
+
+   <!-- Modal for adding/editing a book -->
+<div id="bookModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+    <div class="modal-content" style="background-color: #fff; padding: 20px; border-radius: 10px; width: 500px; position: relative; margin: auto;">
+        <span class="close" style="position: absolute; top: 10px; right: 10px; font-size: 1.5em; cursor: pointer; color: #007BFF;">&times;</span>
+        <h2 style="margin-bottom: 20px; color: #333; text-align: center;">Add/Edit Book</h2>
+        <form id="bookForm" style="display: flex; flex-direction: column;">
+            <label for="title" style="margin-bottom: 5px;">Book Title:</label>
+            <input type="text" id="title" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+            <label for="pages" style="margin-bottom: 5px;">Book Pages:</label>
+            <input type="number" id="pages" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+            <label for="publisher" style="margin-bottom: 5px;">Book Publisher:</label>
+            <input type="text" id="publisher" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+            <label for="author" style="margin-bottom: 5px;">Book Author:</label>
+            <input type="text" id="author" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+            <label for="edition" style="margin-bottom: 5px;">Book Edition:</label>
+            <input type="text" id="edition" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+            <button type="submit" style="background-color: #007BFF; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px;">Save</button>
+        </form>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

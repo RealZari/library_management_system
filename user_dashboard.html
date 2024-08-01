@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <div class="user-container" style="width: 80%; max-width: 1200px; margin: 30px auto; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center; color: #333; margin-bottom: 20px;">Student/Teacher Dashboard</h2>
+        
+        <div class="section" style="margin-bottom: 30px; border-bottom: 2px solid #007BFF; padding-bottom: 15px;">
+            <h3 style="color: #007BFF; margin-bottom: 10px;">Available Books</h3>
+            <div id="availableBooks" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #fafafa;">
+                <!-- Available books will be dynamically populated here -->
+            </div>
+        </div>
+
+        <div class="section" style="margin-bottom: 30px; border-bottom: 2px solid #007BFF; padding-bottom: 15px;">
+            <h3 style="color: #007BFF; margin-bottom: 10px;">Request Book</h3>
+            <form id="requestForm" style="display: flex; flex-direction: column; max-width: 400px; margin: 0 auto;">
+                <label for="requestedBookTitle" style="margin-bottom: 5px; color: #333;">Book Title:</label>
+                <input type="text" id="requestedBookTitle" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em; width: 100%;">
+                <button type="submit" style="background-color: #007BFF; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; transition: background-color 0.3s ease;">
+                    Request
+                </button>
+            </form>
+        </div>
+
+        <div class="section" style="margin-bottom: 30px; border-bottom: 2px solid #007BFF; padding-bottom: 15px;">
+            <h3 style="color: #007BFF; margin-bottom: 10px;">Currently Borrowed Books</h3>
+            <div id="borrowedBooks" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #fafafa;">
+                <!-- List of currently borrowed books will be populated here -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 style="color: #007BFF; margin-bottom: 10px;">List of Returned Books</h3>
+            <div id="returnedBooks" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #fafafa;">
+                <!-- List of returned books will be populated here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
